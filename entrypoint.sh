@@ -22,7 +22,7 @@ if [[ "${INPUT_BALENA_SECRETS}" != "" ]]; then
 fi
 
 # Log in to Balena
-balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
+balena login --token ${INPUT_BALENA_API_TOKEN}
 
 # Run command
 /bin/bash -c "$*"
