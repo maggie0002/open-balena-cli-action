@@ -27,7 +27,7 @@ if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
   update-ca-certificates
   systemctl restart docker
 fi
-
+export NODE_EXTRA_CA_CERTS='/usr/local/share/ca-certificates/ca.crt'
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
 
