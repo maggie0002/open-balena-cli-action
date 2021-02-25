@@ -1,7 +1,7 @@
 # Open Balena CLI
 
 ### TL;DR
-This is actions only for using with OpenBalena as alternative to BalenaCloud push part
+This is actions only for using with OpenBalena as alternative to BalenaCloud push.
 
 Continuously deliver your applications to [OpenBalena](https://www.balena.io/open/).
 
