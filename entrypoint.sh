@@ -18,12 +18,14 @@ fi
 
 # Write server api address to settings
 if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
-  mkdir -p ~/.balena/
+  echo "balenaUrl: \"${INPUT_OPEN_BALENA_ADDRESS}\"" > ~/.balenarc.yml
 fi
 
 if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
   echo ${INPUT_ROOT_CERT} > ca.crt
   cp ca.crt /usr/local/share/ca-certificates/ca.crt
+  update-ca-certificates
+  systemctl restart docker
 fi
 
 # Log in to Balena
