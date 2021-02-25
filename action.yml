@@ -1,4 +1,4 @@
-name: 'Balena CLI'
+name: 'Open Balena CLI'
 branding:
   color: "yellow"
   icon: "upload-cloud"
@@ -14,9 +14,12 @@ inputs:
   balena_command:
     description: "The command to execute with balena"
     required: true
-  balena_secrets:
-    description: "Optional contents of a balena secrets.json file"
-    required: false
+  open_balena_address:
+    description: "Provide address of intance for your OpenBalena cloud"
+    required: true
+  open_root_cert:
+    description: "Provide content of your root cert for your OpenBalena cloud"
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
