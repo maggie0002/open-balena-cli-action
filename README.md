@@ -1,6 +1,6 @@
 # Balena CLI
 
-Continuously deliver your applications to [BalenaCloud](https://www.balena.io/).
+Continuously deliver your applications to [OpenBalena](https://www.balena.io/open/).
 
 Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe Mainwaring](https://github.com/theaccordance).
 
@@ -14,15 +14,19 @@ Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe M
 
 **Required**: The balena command you would like to run with the action.
 
+### `open_balena_address`
+
+**Required**: Provide address of intance for your OpenBalena cloud.
+
+### `open_root_cert`
+
+**Required**: Provide content of your root cert for your OpenBalena cloud.
+
 ### `application_path`
 
 _Optional_: Provide a sub-path to the location for application being deployed to BalenaCloud.  Defaults to the workspace root.
 
-### `balena_secrets`
 
-_Optional_: Provide the contents of a balena secrets.json file for authenticating against private registries. 
-
-_Note_: If using private GitHub Packages, you must provide a Personal Access Token instead of using the builtin `secrets.GITHUB_TOKEN`. GitHub currently [does not support](https://github.community/t5/GitHub-Actions/GITHUB-TOKEN-cannot-access-private-packages/m-p/35240) pulling from private package registries using the actions token.
 
 ## Workflow Example
 ```yaml
@@ -41,16 +45,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Balena Deploy
-        uses: bekriebel/balena-cli-action@v1
+        uses: solar-control/balena-cli-action@v1
         if: success()
         with:
           balena_api_token: ${{secrets.BALENA_API_TOKEN}}
           balena_command: "deploy my-awesome-app --logs"
-          balena_secrets: |
-            {
-              "docker.pkg.github.com": {
-                "username": "${{ secrets.MY_GITHUB_USER }}",
-                "password": "${{ secrets.MY_GITHUB_TOKEN }}"
-              }
-            }
+          open_balena_address: ${{secrets.OPEN_BALENA_ADDRESS}}
+          open_root_cert: ${{secrets.OPEN_BALENA_ROOT_CERT}}
 ```
