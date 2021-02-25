@@ -1,4 +1,7 @@
-# Balena CLI
+# Open Balena CLI
+
+### TL;DR
+This is actions only for using with OpenBalena as alternative to BalenaCloud push part
 
 Continuously deliver your applications to [OpenBalena](https://www.balena.io/open/).
 
@@ -8,7 +11,7 @@ Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe M
 
 ### `balena_api_token`
 
-**Required**: A BalenaCloud API Token, used to authenticate with BalenaCloud.  API keys can be created in the [user settings for BalenaCloud](https://dashboard.balena-cloud.com/preferences/access-tokens).
+**Required**: A OpenBalena API Token, used to authenticate with OpenBalena.  API keys can be created in the [user settings for BalenaCloud](https://dashboard.balena-cloud.com/preferences/access-tokens).
 
 ### `balena_command`
 
