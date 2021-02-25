@@ -18,7 +18,7 @@ Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe M
 
 **Required**: Provide address of intance for your OpenBalena cloud.
 
-### `open_root_cert`
+### `root_cert`
 
 **Required**: Provide content of your root cert for your OpenBalena cloud.
 
