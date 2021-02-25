@@ -51,5 +51,5 @@ jobs:
           balena_api_token: ${{secrets.BALENA_API_TOKEN}}
           balena_command: "deploy my-awesome-app --logs"
           open_balena_address: ${{secrets.OPEN_BALENA_ADDRESS}}
-          open_root_cert: ${{secrets.OPEN_BALENA_ROOT_CERT}}
+          root_cert: ${{secrets.OPEN_BALENA_ROOT_CERT}}
 ```
