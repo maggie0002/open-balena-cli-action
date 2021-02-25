@@ -5,6 +5,7 @@ set -e
 if [ -d "${GITHUB_WORKSPACE}" ]; then
   cd ${GITHUB_WORKSPACE}
 fi
+
 if [ -d "${INPUT_APPLICATION_PATH}" ]; then
   cd ${INPUT_APPLICATION_PATH}
 fi
@@ -15,8 +16,13 @@ if [[ "${INPUT_BALENA_API_TOKEN}" == "" ]]; then
   exit 1
 fi
 
-# Write secrets file if provided
-if [[ "${INPUT_BALENA_SECRETS}" != "" ]]; then
+# Write server api address to settings
+if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
+  mkdir -p ~/.balena/
+  echo ${INPUT_BALENA_SECRETS} > ~/.balena/secrets.json
+fi
+
+if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
   mkdir -p ~/.balena/
   echo ${INPUT_BALENA_SECRETS} > ~/.balena/secrets.json
 fi
