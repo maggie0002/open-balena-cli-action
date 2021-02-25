@@ -19,12 +19,11 @@ fi
 # Write server api address to settings
 if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
   mkdir -p ~/.balena/
-  echo ${INPUT_BALENA_SECRETS} > ~/.balena/secrets.json
 fi
 
-if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
-  mkdir -p ~/.balena/
-  echo ${INPUT_BALENA_SECRETS} > ~/.balena/secrets.json
+if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
+  echo ${INPUT_ROOT_CERT} > ca.crt
+  cp ca.crt /usr/local/share/ca-certificates/ca.crt
 fi
 
 # Log in to Balena
