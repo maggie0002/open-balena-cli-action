@@ -26,7 +26,9 @@ if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
   cp ca.crt /usr/local/share/ca-certificates/ca.crt
   update-ca-certificates
 fi
-export NODE_EXTRA_CA_CERTS="${PWD}/ca.crt"
+ls -a
+
+NODE_EXTRA_CA_CERTS="${PWD}/ca.crt"
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
 
