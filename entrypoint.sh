@@ -28,8 +28,8 @@ if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
 fi
 echo ${PWD}
 
-NODE_EXTRA_CA_CERTS="/github/workspace/ca.crt"
+export NODE_EXTRA_CA_CERTS="/github/workspace/ca.crt"
+echo ${NODE_EXTRA_CA_CERTS}
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
-
 balena ${INPUT_BALENA_COMMAND}
