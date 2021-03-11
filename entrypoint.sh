@@ -24,12 +24,11 @@ fi
 if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
   echo ${INPUT_ROOT_CERT} > ca.crt
   cp ca.crt /usr/local/share/ca-certificates/ca.crt
-  cp ca.crt ${PWD}/ca.crt
   update-ca-certificates
 fi
 echo ${PWD}
 
-NODE_EXTRA_CA_CERTS="${PWD}/ca.crt"
+NODE_EXTRA_CA_CERTS="/github/workspace/ca.crt"
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
 
