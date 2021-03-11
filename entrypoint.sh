@@ -31,5 +31,4 @@ export NODE_EXTRA_CA_CERTS='/opt/ca.crt'
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
 
-# Run command
-/bin/bash -c "$*"
+balena ${INPUT_BALENA_COMMAND}
