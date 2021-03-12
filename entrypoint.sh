@@ -29,7 +29,7 @@ if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
   update-ca-certificates
 fi
 echo ${INPUT_ROOT_CERT}
-echo ${INPUTE_BALENA_COMMAND}
+echo ${INPUT_BALENA_COMMAND}
 export "NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/ca.crt"
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
