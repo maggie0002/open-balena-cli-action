@@ -48,7 +48,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Balena Deploy
-        uses: Solar-Control/open-balena-cli-action@v1.0.2
+        uses: Solar-Control/open-balena-cli-action@v2.0.0
         if: success()
         with:
           balena_api_token: ${{secrets.BALENA_API_TOKEN}}
