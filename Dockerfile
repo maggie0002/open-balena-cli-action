@@ -16,11 +16,7 @@ RUN apt-get update && apt-get install -y \
   rm -rf \
     balena-cli-*-linux-x64-standalone.zip \
     /var/lib/apt/lists/*
-RUN echo ${INPUT_ROOT_CERT} > ca.crt && \ 
-  cp ca.crt /usr/local/share/ca-certificates/ca.crt && \ 
-  update-ca-certificates
 
-RUN export NODE_EXTRA_CA_CERTS="/github/workspace/ca.crt"
 # Copy entrypoint into `/opt`
 COPY entrypoint.sh /opt/entrypoint.sh
 
