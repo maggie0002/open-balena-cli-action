@@ -24,9 +24,9 @@ fi
 if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
   echo ${INPUT_ROOT_CERT} > ca.crt
   cp ca.crt /usr/local/share/ca-certificates/ca.crt
-  update-ca-certificates
   chmod 644 /usr/local/share/ca-certificates/ca.crt
   chmod 644 ca.crt
+  update-ca-certificates
 fi
 
 export "NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/ca.crt"
