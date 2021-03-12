@@ -24,7 +24,8 @@ Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe M
 ### `root_cert`
 
 **Required**: Provide content of your root cert for your OpenBalena cloud.
-**IMPORTANT!**: Need to inline your ca.crt before put it to the Github Secrets. You can yse `awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}'  ca.crt` command for this purpose
+
+**IMPORTANT!**: Need to inline your ca.crt before put it to the Github Secrets. You can use `awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}'  ca.crt` command for this purpose
 
 ### `application_path`
 
@@ -34,7 +35,7 @@ _Optional_: Provide a sub-path to the location for application being deployed to
 
 ## Workflow Example
 ```yaml
-name: BalenaCloud Deploy
+name: OpenBalena Deploy
 
 on:
   push:
