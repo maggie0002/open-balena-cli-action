@@ -30,6 +30,7 @@ echo ${PWD}
 
 export NODE_EXTRA_CA_CERTS="/usr/local/share/ca-certificates/ca.crt"
 echo ${NODE_EXTRA_CA_CERTS}
+alias balena='NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/ca.crt /usr/bin/balena'
 # Log in to Balena
 balena login --token ${INPUT_BALENA_API_TOKEN} > /dev/null
 balena ${INPUT_BALENA_COMMAND}
