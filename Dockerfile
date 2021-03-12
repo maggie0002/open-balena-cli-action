@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM ubuntu:latest
 LABEL Description="Use the Balena CLI to perform actions"
 
 # Install the standalone balena-cli package
