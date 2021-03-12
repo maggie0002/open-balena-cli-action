@@ -11,7 +11,7 @@ Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe M
 
 ### `balena_api_token`
 
-**Required**: A OpenBalena API Token, used to authenticate with OpenBalena.  API keys can be created in the [user settings for BalenaCloud](https://dashboard.balena-cloud.com/preferences/access-tokens).
+**Required**: A OpenBalena API Token, used to authenticate with OpenBalena.  API keys can be created in the BalenaCLI via `balena api-key create`
 
 ### `balena_command`
 
