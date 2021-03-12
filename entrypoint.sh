@@ -22,13 +22,13 @@ if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
 fi
 
 if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
-  printf ${INPUT_ROOT_CERT} > ca.crt
+  echo -e ${INPUT_ROOT_CERT} > ca.crt
   cp ca.crt /usr/local/share/ca-certificates/ca.crt
   chmod 644 /usr/local/share/ca-certificates/ca.crt
   chmod 644 ca.crt
   update-ca-certificates
 fi
-printf ${INPUT_ROOT_CERT}
+echo -e ${INPUT_ROOT_CERT}
 echo ${INPUT_BALENA_COMMAND}
 export "NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/ca.crt"
 # Log in to Balena
