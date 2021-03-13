@@ -7,6 +7,9 @@ Continuously deliver your applications to [OpenBalena](https://www.balena.io/ope
 
 Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe Mainwaring](https://github.com/theaccordance).
 
+**IMPORTANT** This actions doesnt promise full functionality!
+To use it for CI/CD process you need to setup your own Github Runner using Full guide below.
+
 ## Full guide
 Link to the full guide for using this Action here [OpenBalena push alternative](https://docs.solar-control.tech/openbalena/open-balena-push-analog).
 
