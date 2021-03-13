@@ -7,6 +7,9 @@ Continuously deliver your applications to [OpenBalena](https://www.balena.io/ope
 
 Based on [Balena Push](https://github.com/theaccordance/balena-push) from [Joe Mainwaring](https://github.com/theaccordance).
 
+Link to the full guide for using this Actioc here [OpenBalena push alternative](https://docs.solar-control.tech/openbalena/open-balena-push-analog).
+
+
 ## Inputs
 
 ### `balena_api_token`
