@@ -22,11 +22,10 @@ if [[ "${INPUT_OPEN_BALENA_ADDRESS}" != "" ]]; then
 fi
 
 if [[ "${INPUT_ROOT_CERT}" != "" ]]; then
-  echo -e ${INPUT_ROOT_CERT} > ca.crt
-  cp ca.crt /usr/local/share/ca-certificates/ca.crt
-  chmod 644 /usr/local/share/ca-certificates/ca.crt
-  chmod 644 ca.crt
-  update-ca-certificates
+  sudo bash -c 'echo -e ${INPUT_ROOT_CERT} > /usr/local/share/ca-certificates/ca.crt'
+  sudo chmod 644 /usr/local/share/ca-certificates/ca.crt
+  sudo update-ca-certificates
+  
 fi
 
 export "NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/ca.crt"
